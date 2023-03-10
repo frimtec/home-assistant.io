@@ -1,0 +1,10 @@
+tasks:
+  - name: Install
+    init: |
+      npm install && bundle install
+      gp sync-done install
+
+  - name: Preview
+    init: gp sync-await install
+    command: |
+      bundle exec rake preview

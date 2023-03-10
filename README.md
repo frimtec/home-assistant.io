@@ -3,7 +3,7 @@
 
 [![Deploys by netlify](https://www.netlify.com/img/global/badges/netlify-color-bg.svg)](https://www.netlify.com)
 
-# Home Assistant website
+# Home Assistant website [![setup automated][gitpod-shield]][gitpod]
 
 This is the source for the [Home-Assistant.io website](https://home-assistant.io).
 
@@ -40,3 +40,6 @@ When you're done working on the site, run the following command to move the post
 ```bash
 bundle exec rake integrate
 ```
+
+[gitpod-shield]: https://img.shields.io/badge/Gitpod-ready_to_code-orange?logo=gitpod
+[gitpod]: https://gitpod.io/from-referrer/
