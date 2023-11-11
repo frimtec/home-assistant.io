@@ -13,7 +13,7 @@ ha_domain: vizio
 ha_zeroconf: true
 ha_platforms:
   - media_player
-ha_integration_type: hub
+ha_integration_type: device
 ---
 
 The `vizio` integration allows you to control [SmartCast](https://www.vizio.com/smartcast-app)-compatible TVs and sound bars (2016+ models).
@@ -131,7 +131,7 @@ device_class:
   description: The class of your device. Valid options are `tv` or `speaker`.
   required: false
   type: string
-  default: tv
+  default: "`tv`"
 volume_step:
   description: The number of steps that the volume will be increased or decreased by at a time.
   required: false

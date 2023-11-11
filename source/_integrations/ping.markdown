@@ -13,6 +13,8 @@ ha_platforms:
   - binary_sensor
   - device_tracker
 ha_integration_type: integration
+ha_codeowners:
+  - '@jpbede'
 ---
 
 There is currently support for the following device types within Home Assistant:
@@ -50,7 +52,7 @@ name:
   default: Ping [hostname]
 {% endconfiguration %}
 
-The sensor exposes the different round trip times values measured by `ping` as attributes:
+The sensor exposes the different round trip times in milliseconds measured by `ping` as attributes:
 
 - `round_trip_time_mdev`
 - `round_trip_time_avg`

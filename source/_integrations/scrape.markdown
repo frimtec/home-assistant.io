@@ -8,7 +8,6 @@ ha_iot_class: Cloud Polling
 ha_codeowners:
   - '@fabaff'
   - '@gjohansson-ST'
-  - '@epenet'
 ha_domain: scrape
 ha_platforms:
   - sensor
@@ -92,6 +91,11 @@ scan_interval:
   required: false
   type: integer
   default: 600
+encoding:
+  description: The character encoding to use if none provided in the header of the shared data.
+  required: false
+  type: string
+  default: UTF-8
 sensor:
   description: A list of sensors to create from the shared data. All configuration settings that are supported by [RESTful Sensor](/integrations/sensor.rest#configuration-variables) not listed above can be used here.
   required: true
@@ -158,7 +162,7 @@ In this section you find some real-life examples of how to use this sensor. Ther
 
 ### Home Assistant
 
-The current release Home Assistant is published on [https://www.home-assistant.io/](/)
+The current release Home Assistant is published on [homepage](/)
 
 {% raw %}
 
@@ -176,7 +180,7 @@ scrape:
 
 ### Available implementations
 
-Get the counter for all our implementations from the [Component overview](/integrations/) page.
+Get the counter for all our implementations from the integrations page under {% my integrations title="**Settings** > **Devices & Services**" %}.
 
 {% raw %}
 
@@ -254,3 +258,27 @@ scrape:
 ```
 
 {% endraw %}
+
+### Container cleaning by CleanProfs in The Netherlands
+
+This example gets the container type and container cleaning date for the next two cleanings.
+
+```yaml
+# Example configuration.yaml entry. Change postal code and house number to your own address.
+scrape:
+  - resource: https://crm.cleanprofs.nl/search/planning
+    method: POST
+    payload: zipcode=5624JW&street_number=17
+    headers:
+      Content-Type: application/x-www-form-urlencoded
+    sensor:
+      - name: "Type container 1"
+        select: "div.nk-tb-item:nth-child(2) > div:nth-child(1) > span:nth-child(1)"
+      - name: "Date container 1"
+        select: "div.nk-tb-item:nth-child(2) > div:nth-child(3) > span:nth-child(1) > span:nth-child(1)"
+      - name: "Type container 2"
+        select: "div.nk-tb-item:nth-child(3) > div:nth-child(1) > span:nth-child(1)"
+      - name: "Date container 2"
+        select: "div.nk-tb-item:nth-child(3) > div:nth-child(3) > span:nth-child(1) > span:nth-child(1)"
+
+```
