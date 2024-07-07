@@ -2,7 +2,7 @@
 title: Flume
 description: Documentation about the flume sensor.
 ha_category:
-  - Binary Sensor
+  - Binary sensor
   - Sensor
 ha_iot_class: Cloud Polling
 ha_release: 0.103
@@ -17,9 +17,12 @@ ha_platforms:
   - binary_sensor
   - sensor
 ha_integration_type: integration
+related:
+  - docs: /docs/configuration/
+    title: Configuration file
 ---
 
-The Flume integration will show you the current [Flume](https://flumewater.com/) status for the given Device ID.
+The Flume {% term integration %} will show you the current [Flume](https://flumewater.com/) status for the given Device ID.
 
 Flume monitors the real-time status of your home water meter. Allowing the end-user to detect small leaks, gain real-time information on household water consumption, set water goals and budgets, and receive push notifications when suspicious water activities occur. 
 
@@ -76,7 +79,7 @@ action:
 
 {% endraw %}
 
-## Configuration for Binary Sensor
+## Configuration for binary sensor
 
 The following YAML creates a binary sensor. This requires the default sensor to be configured successfully.
 

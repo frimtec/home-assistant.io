@@ -2,7 +2,7 @@
 title: AVM FRITZ!SmartHome
 description: Instructions on how to integrate AVM Fritz!DECT components into Home Assistant.
 ha_category:
-  - Binary Sensor
+  - Binary sensor
   - Button
   - Climate
   - Light
@@ -33,7 +33,7 @@ The AVM FRITZ!SmartHome integration for Home Assistant allows you to integrate [
 
 There is currently support for the following device types within Home Assistant:
 
-- Binary Sensor
+- Binary sensor
 - Climate
 - Cover
 - Light
@@ -42,7 +42,7 @@ There is currently support for the following device types within Home Assistant:
 
 Additionally, we also support to trigger smarthome templates.
 
-#### Tested Devices
+#### Tested devices
 
 - [FRITZ!Box 5590 Fiber](https://en.avm.de/products/fritzbox/fritzbox-5590-fiber/)
 - FRITZ!Box 6490 Cable
@@ -63,11 +63,11 @@ Additionally, we also support to trigger smarthome templates.
 
 {% include integrations/config_flow.md %}
 
-<div class='note'>
+{% note %}
 The configuration in the UI asks for a username. Starting from FRITZ!OS 7.24 the FRITZ!Box creates a random username for the admin user if you didn't set one yourself. This can be found after logging into the FRITZ!Box and visiting System -> FRITZ!Box Users -> Users. The username starts with "fritz" followed by four random numbers. Under properties on the right it says "created automatically". Prior to FRITZ!OS 7.24 the default username was "admin".
-</div>
+{% endnote %}
 
-## Switches & Thermostats
+## Switches & thermostats
 
 To get AVM FRITZ!DECT switches (e.g. FRITZ!DECT 400/440) or thermostats (e.g. FRITZ!DECT 301) follow the [configuration instructions](#configuration) above.
 
@@ -118,9 +118,9 @@ There are several attributes that can be useful for automations and templates.
 
 To get AVM FRITZ!DECT lightbulbs (e.g., FRITZ!DECT 500) follow the [configuration instructions](#configuration) above.
 
-<div class='note'>
-The FRITZ!DECT 500 lightbulb supports only 36 colors. When a color is picked in home assistant that is not supported by the device, a color that comes close will be activated.
-</div>
+{% note %}
+The FRITZ!DECT 500 lightbulb supports only 36 colors. When a color is picked in Home Assistant that is not supported by the device, a color that comes close will be activated.
+{% endnote %}
 
 ## Cover
 

@@ -2,7 +2,7 @@
 title: Home Assistant Supervisor
 description: Control Supervisor Add-ons and OS from Home Assistant
 ha_category:
-  - Binary Sensor
+  - Binary sensor
   - Sensor
   - Update
 ha_iot_class: Local Polling
@@ -65,7 +65,7 @@ For Home Assistant Host, the following sensors are available:
 | Disk Total | no | Total space (in GB) on the device
 | Disk Used | no | Used space (in GB) on the device
 
-## Binary Sensor entities
+## Binary sensor entities
 
 For each installed add-on Supervisor provides following binary sensors:
 
@@ -122,7 +122,7 @@ Write data to add-on stdin.
 
 ### Service hassio.addon_update
 
-Update add-on. This service should be used with caution since add-on updates can contain breaking changes. It is highly recommended that you review release notes/change logs before updating an add-on.
+Update add-on. This service should be used with caution since add-on updates can contain backward-incompatible changes. It is highly recommended that you review release notes/change logs before updating an add-on.
 
 | Service Data Attribute | Optional | Description |
 | ---------------------- | -------- | ----------- |
